@@ -5,18 +5,28 @@ Project phase 1
 Rolodex App
 */
 
+/**
+ * Demonstrates inheritance AND polymorphism
+ */
+
 public class BusinessContact extends Contact {
+
     private String company;
     private String jobTitle;
 
-    public BusinessContact(String firstName, String lastName, String phone, String email, String company, String jobTitle) {
+    public BusinessContact(String firstName, String lastName, String phone, String email,
+                           String company, String jobTitle) {
+
         super(firstName, lastName, phone, email);
         this.company = company;
         this.jobTitle = jobTitle;
     }
 
-    public String toString() {
-        return super.toString() + " | Company: " + company + " | Title: " + jobTitle;
+    // POLYMORPHISM: overriding display()
+    @Override
+    public String display() {
+        return super.display() +
+               " | Company: " + company +
+               " | Title: " + jobTitle;
     }
-
 }

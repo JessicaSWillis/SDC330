@@ -7,20 +7,25 @@ Rolodex App
 import java.util.ArrayList;
 
 public class Rolodex {
-    private ArrayList<Contact> contacts;
+
+    // COMPOSITION + POLYMORPHISM
+    private ArrayList<Displayable> contacts;
 
     public Rolodex() {
         contacts = new ArrayList<>();
     }
 
-    public void addContact(Contact contact) {
+    public void addContact(Displayable contact) {
         contacts.add(contact);
     }
 
     public void displayContacts() {
-        for (Contact c : contacts) {
-            System.out.println(c);
+
+        System.out.println("\n--- Contact List ---");
+
+        // POLYMORPHISM happens here
+        for (Displayable c : contacts) {
+            System.out.println(c.display());
         }
     }
-
 }
