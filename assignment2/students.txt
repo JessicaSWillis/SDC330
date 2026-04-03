@@ -1,0 +1,3 @@
+Jessica willis|SDC330|Loops|12
+Madelaine Willis|CST120|Execption Handling|2
+Lily Cramer|MTH100|Classes|5
